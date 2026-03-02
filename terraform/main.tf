@@ -18,7 +18,8 @@ provider "aws" {
   skip_requesting_account_id  = true
 
   endpoints {
-    dynamodb = "http://localhost:4566"
+    # Using the Docker container name 'localstack' instead of 'localhost'
+    dynamodb = "http://localstack:4566"
   }
 }
 
